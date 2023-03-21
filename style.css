@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Bona Nova', serif;
+    --color-primary: #f4cb01;
+    --color-secondary: #0C3B2E;
+    --color-olive: #6D9773;
+    --color-brownish: #BB8A52;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.content_intro {
+    background-color: var(--color-primary);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.content_intro-animation {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  .package {
+    width: 50px;
+    height: 50px;
+    background: rgb(241, 233, 220);
+    animation: animate 1s linear infinite;
+    border-radius: 2px;
+  }
+
+  .package:before {
+    background: rgb(243, 183, 114);
+    content: "";
+    height: 3px;
+    left: 0px;
+    position: absolute;
+    top: calc(25px - 1.5px);
+    width: 50px;
+    transform: rotate(90deg);
+    border-radius: 1px;
+  }
+
+  .package:after {
+    background: rgb(243, 183, 114);
+    content: "";
+    height: 3px;
+    left: 0px;
+    position: absolute;
+    top: calc(25px - 1.5px);
+    width: 50px;
+    border-radius: 1px;
+  }
+
+  @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 20px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+  } 
+  .package_shadow{ 
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    border-radius: 50%;
+    animation: shadow 1s linear infinite;
+  }
+  @keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+  }
+  
+.background_image {
+    background-image: url("./squared-lockers.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 850px;
+    -webkit-filter: blur(8px);
+    z-index: -2;
+    position: absolute;
+    top: 0%;
+    background-position-y: top;
+    display: none;
+}
+
+.background_image-above-first {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 50vh solid #eee;
+      border-left: 100vw solid transparent;
+      z-index: -1;
+}
+.background_image-above-second {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 50vh solid #eee;
+      border-right: 100vw solid transparent;
+      z-index: -1;
+}
+.content_active_panel {
+    padding-top: 175px;
+    display: none;
+}
+
+.active_panel {
+    width: 400px;
+    height: 550px;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 28px -15px rgba(0, 0, 0, 0.4);
+}
+
+#form, #finish {
+    display: none;
+    font-family: var(--font-family);
+    color: var(--color-secondary);
+}
+
+.btn {
+    background-color: var(--color-primary);
+    text-align: center auto;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn, .btn1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    transition: all .5s ease-out;
+    color: white;
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.btn1 {
+    font-size: 32px;
+    background-color: transparent;
+  }
+  .btn1:hover {
+    background-color: white;
+    color: var(--color-primary);
+    width: 300px;
+    height: 60px;
+}
+
+.form_greeting {
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0%;
+}
+
+.text-info-phone {  
+    margin: auto 50px;
+    color: var(--color-olive);
+    font-family: var(--font-family);
+    font-weight: 700;
+    text-align: left;   
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-group {
+    margin: 10px;
+    height: 120px;
+}
+
+.input-group-phone, .input-group-code {
+    position: relative;
+}
+.text-box {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    color: #000000;
+    position: absolute;
+    background: #ffffff;
+}
+
+.text-phone {
+    margin: 73px 0 0 90px;
+    width: 104px;  
+}
+
+.text-code {
+    margin: 169px 0 0 90px;
+    width: 133px;
+}
+
+.form {
+    width: 250px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+  .form-phone {
+      margin: 50px auto 0;
+  }
+
+  .form-phone, .form-code {
+      border-color: var(--color-brownish);
+  }
+
+  .input-group-phone::after {
+    content: "Numer telefonu";
+    width: 115px;
+    position: absolute;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--color-olive);
+    background: #ffffff;
+    left: 20%;
+    top: 36%;
+  }
+  .input-group-code::after {
+    content: "Kod zabezpieczający";
+    width: 146px;
+    position: absolute;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--color-olive);
+    background: #ffffff;
+    left: 20%;
+    top: 11%;
+  }
+
+.error {
+        display: none;
+        font-family: var(--font-family);
+        font-size: 10px;
+        color: red;
+}
+
+.error-code {
+    margin: -10px;
+}
+
+  .form-code {
+      margin: 20px -129px;
+  }
+
+.btn2 {
+    margin: 0 -150px;
+    position: absolute;
+    background-color: var(--color-secondary);
+    transition: all .5s ease-out;
+}
+.btn2:disabled {
+    background-color: #fff;
+    color: var(--color-olive);
+    border: 1px solid var(--color-olive);
+    border-radius: 5px;
+}
+
+#finish {
+    padding: 0 40px;
+}
+
+.text-finish {
+    padding: 20px;
+    height: 40px;
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.btn3 {
+    margin-top: 40px;
+}
+
+.btn3, .btn4 {
+    margin-bottom: 46px;
+    background-color: var(--color-secondary);
+}

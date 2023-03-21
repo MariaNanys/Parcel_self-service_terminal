@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <title>Envelo w paczkomacie</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div class="content_intro">
+                <div class="content_intro-animation">
+                    <div class="package"></div>
+                    <div class="package_shadow"></div>
+                </div> 
+                <div id="start">
+                    <button class="btn1" onclick="start()">Rozpocznij teraz!</button>
+                </div>
+            </div>
+            <div class="background_image"></div>            
+            <div class="background_image-above-first"></div>            
+            <div class="background_image-above-second"></div>            
+            <div class="content_active_panel">
+                <div class="active_panel">  
+                    <div id="form">
+                        <p class="form_greeting">Witaj!</p>
+                        <p class="text-info-phone">Proszę podać numer telefonu i kod zabezpieczający:</p>
+                        <form id="myForm">
+                            <div class="input-group input-group-phone">
+                                <input type="number" class="form-phone form" onkeyup="validatePhone()">
+                                <p class="error error-phone">Numer telefonu jest błędny</p>
+                            </div>
+                            <div class="input-group input-group-code">
+                                <input type="number" class="form-code form" onkeyup="validateCode()">
+                                <p class="error error-code">Kod zabezpieczający jest błędny</p>
+                            </div>
+                        </form>
+                        <button class="btn2 btn" onclick="getPackage()" disabled>Odbierz paczkę</button>
+                    </div>
+                <div id="finish">
+                    <p class="text-finish">Doskonale!</p>
+                    <p>Masz już swoją przesyłkę. Jakie będzie Twoje następne działanie?</p>
+                    <button class="btn3 btn" onclick="theEnd()">To wszystko na dziś.</button>
+                    <button class="btn4 btn" onclick="newPackage()">Odbierz kolejną paczkę</button>
+                </div>
+            </div>
+            
+            </div> 
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
